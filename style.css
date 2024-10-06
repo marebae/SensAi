@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', 'Berlin Sans FB';
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#header {
+    width: 100%;
+    height: 150vh;
+    background: url(images/forest.jpg) center / cover;
+    display: flex;
+    text-align:center;
+}
+
+.container {
+    padding: 10px 10%;
+    text-align: center; 
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align nav items to the left */
+    flex-wrap: wrap;
+    width: 100%; /* Make sure nav takes full width */
+}
+
+.logo {
+    width: 330px;
+    margin-right: auto; /* Push logo to the left */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 32px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0;
+    text-align: center; /* Center text alignment */
+}
+
+.header-text p {
+    font-size: 60px;
+    margin: 80px 100;
+}
+
+.header-text h1 {
+    font-size: 150px;
+    text-align:center;
+    margin-top: 20px;
+}
+
+#about {
+    padding: 80px 0;
+    text-align: center;
+    font-size:30px;
+}
+
+.sub-title {
+    font-size: 80px;
+    font-weight: 600;
+    margin: 40px 0;
+}
+
+.team-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.team-list div {
+    flex: 1 1 200px;
+    max-width: 250px;
+    background: #9a0000;
+    padding: 40px;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    margin: 20px;
+}
+
+.team-list div:hover {
+    background: #3b0303;
+    transform: translateY(-10px);
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #000;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i {
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-text {
+        padding: 100px 0;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    .header-text p {
+        font-size: 16px;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .team-list div {
+        max-width: 100%;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
